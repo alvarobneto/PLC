@@ -2,9 +2,9 @@ public class Conta{
     private String numero;
     private double saldo;
 
-    public Conta(String numeroInicial, double saldoInicial){
-        numero = numeroInicial;
-        saldo = saldoInicial;
+    public Conta(String numero, double saldo){
+        this.numero = Conta.getProximo();
+        this.saldo = saldo;
     }
 
     public void creditar(double valor){
@@ -25,4 +25,8 @@ public class Conta{
         return numero;
     }
 
+    private static int getProximo(){
+        proximo = proximo + 1;
+        return proximo;
+    }
 }
